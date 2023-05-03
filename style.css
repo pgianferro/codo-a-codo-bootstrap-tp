@@ -1,3 +1,4 @@
+/* Styles applied in general */
 body {
     padding-top: 86px; 
 }
@@ -12,12 +13,11 @@ main p {
         display:flex;
         flex-direction: column;
     }
-
-
-
   }
 
+  /* Styles applied to screens smaller than 576 pixels wide */
   @media screen and (max-width: 576px) {
+        /* CSS rules for screens smaller than 576 pixels wide */
     main img {
         height: 300px;
         width:auto
