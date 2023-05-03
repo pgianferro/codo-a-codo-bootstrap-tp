@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-scroll">
     <!-- First Section: Header, Navbar Component -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
+        <nav id="navbar-scroll" class="navbar navbar-expand-lg bg-body-tertiary fixed-top" class="navbar bg-dark" data-bs-theme="dark">
             <div class="container-fluid ps-5 pe-5">
                 <a class="navbar-brand" href="https://agenciadeaprendizaje.bue.edu.ar/codo-a-codo/">
                     <img src="codoacodo.png" alt="Logo" width="104,7" height="60" class="d-inline-block ">
@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">La conferencia</a>
+                            <a class="nav-link" href="#conf">La conferencia</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#speakers">Los oradores</a>
@@ -67,8 +67,8 @@
     </header>
 
     <!-- Second Section: Main, Carousel Component -->
-    <main>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <main id="conf">
+        <div id="carouselExampleAutoplaying" class="carousel slide carouselcss" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="ba1.jpg" class="d-block w-100" alt="Museo Obras Sanitarias"
@@ -144,14 +144,14 @@
     </main>
 
     <!-- Third Section: Speakers -->
-    <div class="container mt-5">
-        <a name="speakers"></a>
+    <a name="speakers"></a>
+    <div id="speakers" class="container mt-5 pt-5">
         <h6 class="text-secondary text-center">CONOCE A LOS</h6>
         <h2 class="text-center">ORADORES</h2>
     </div>
-    <div class="container col-9 mb-5">
-        <div class="card-group card-img">
-            <div class="card m-3">
+    <div class="container col-md-12 col-lg-9 mb-5">
+        <div class="card-group card-img speakers">
+            <div class="card m-3 border-secondary-subtle">
                 <img src="steve.jpg" class="card-img-top" alt="Steve Jobs">
                 <div class="card-body">
                     <span class="badge text-bg-warning">Javascript</span>
@@ -163,7 +163,7 @@
                     <p class="card-text"><small class="text-body-secondary"> <a onclick="alert('(Steve Paul Jobs; San Francisco, 1955 - Palo Alto, California, 2011) Informático y empresario estadounidense. Padre del primer ordenador personal y fundador de Apple Computer, probablemente la empresa más innovadora del sector, este mago de la informática fue uno de los más influyentes de la vertiginosa escalada tecnológica en que aún vive el mundo actual, contribuyendo decisivamente a la popularización de la informática. Sus ideas visionarias en el campo de los ordenadores personales, la música digital o la telefonía móvil revolucionaron los mercados y los hábitos de millones de personas durante más de tres décadas.')" href="#">Ver más...</a></small></p>
                 </div>
             </div>
-            <div class="card m-3">
+            <div class="card m-3 border-secondary-subtle">
                 <img src="bill.jpg" class="card-img-top" alt="Bill Gates">
                 <div class="card-body">
                     <span class="badge text-bg-warning">Javascript</span>
@@ -174,7 +174,7 @@
                             infancia Paul Allen.</small></p>
                             <p class="card-text"><small class="text-body-secondary"> <a onclick="alert('(William Henry Gates III; Seattle, Washington, 1955) Informático y empresario estadounidense, fundador de Microsoft. La fortuna de este precoz programador, que no llegó a terminar sus estudios y que a los 31 años era ya multimillonario, procede del éxito arrollador de su sistema operativo, el MS-DOS (1981), que evolucionaría hasta convertirse en el popular Windows 3.1 (1992) y daría lugar a las sucesivas versiones de este sistema operativo, omnipresente hasta nuestros días en la inmensa mayoría de los ordenadores portátiles y de sobremesa.')" href="#">Ver más...</a></small></p>                </div>
             </div>
-            <div class="card m-3">
+            <div class="card m-3 border-secondary-subtle">
                 <img src="ada.jpeg" class="card-img-top" alt="Ada Lovelace">
                 <div class="card-body">
                     <span class="badge text-bg-secondary">Negocios</span>
@@ -190,14 +190,13 @@
     </div>
 
     <!-- Fourth Section: Location -->
-
-    <div class="container-fluid m-0 p-0 border-0 d-flex justify-content-center bg-secondary">
-        <a name="where"></a>
-        <div class="row">
-            <div class="col-6">
+    <a name="where"></a>
+    <div id="where" class="container-fluid mt-5 pt-5 m-0 d-flex justify-content-center">
+        <div class="row" >
+            <div class="col-6 p-0">
                 <img src="honolulu.jpg" alt="" width="100%" height="100%">
             </div>
-            <div class="col-6 text-bg-secondary mt-3">
+            <div class="col-6 text-bg-secondary p-3 bg-secondary">
                 <h1>Bs As - Octubre</h1>
                 <p class="d-none d-md-block">Buenos Aires es la provincia y localidad más grande del estado de
                     Argentina, en los Estados
@@ -207,23 +206,25 @@
                     una ciudad
                     condado consolidada que cubre toda la ciudad (aproximadamente 600 km° de superficie).
                 </p>
-                <div class="btn btn-outline-light" onclick="alert('Octubre en Buenos Aires tiene un clima bastante agradable. Empieza a ser calor, a veces hasta 30 grados como mucho, pero por lo general suele tener mañanas frescas (15ºC por poner un número) y por la tarde sobrepasa sin duda los 20 y como dije puede que llegue hasta los 30.')">Conocé más</div>
+                <div class="btn btn-outline-light mb-5" onclick="alert('Octubre en Buenos Aires tiene un clima bastante agradable. Empieza a ser calor, a veces hasta 30 grados como mucho, pero por lo general suele tener mañanas frescas (15ºC por poner un número) y por la tarde sobrepasa sin duda los 20 y como dije puede que llegue hasta los 30.')">Conocé más</div>
             </div>
         </div>
     </div>
 
     <!-- Fifth Section: Form -->
-    <div class="container mt-5">
-        <a name="form"></a>
+    <a name="form"></a>
+    <div id="form" class="container mt-5 pt-5">
         <h6 class="text-secondary text-center">CONVIÉRTETE EN UN</h6>
         <h2 class="text-center">ORADOR</h2>
-        <p class="text-center">Anotate como orador para dar una charla Ignite. Cuéntanos de que quieres hablar!</p>
+        <div class="container col col-md-6 justify-content-center">
+            <p class="text-center">Anotate como orador para dar una charla Ignite. Cuéntanos de que quieres hablar!</p>
+        </div>
 
-        <div class="container col-6">
+        <div class="container col col-md-6">
             <div class="row mb-4">
                 <form action="mailto:norberto.llopiz@bue.edu.ar" method="post" enctype="text/plain">
                     <div class="row mb-4">
-                      <div class="col mb-4">
+                      <div class="col">
                         <div class="form-outline">
                           <input type="text" id="" class="form-control" name="first_name" placeholder="Nombre" />
                         </div>
@@ -244,7 +245,7 @@
     </div>
     
     <!-- Sixth Section: Footer -->
-    <footer class="bg-dark text-light pt-5 pb-5">
+    <footer class="bg-dark text-light mt-5 pt-5 pb-5">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-1 col-md-6">
