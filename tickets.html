@@ -126,23 +126,71 @@
                     <div class="row mb-4">
                         <div class="col">
                             <div class="form-outline">
-                                <input type="text" id="" class="form-control" name="first_name" placeholder="Nombre" />
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="firstName" placeholder="Nombre" value="">
+                                    <label for="floatingInputGrid">Nombre</label>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-outline">
-                                <input type="text" id="" class="form-control" name="last_name" placeholder="Apellido" />
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Apellido" value="">
+                                    <label for="floatingInputGrid">Apellido</label>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-outline mb-4">
-                        <textarea class="form-control" id="" rows="4" name="about"
-                            placeholder="Sobre qué quieres hablar?"></textarea>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="email" placeholder="Correo"
+                                value="">
+                            <label for="floatingInputGrid">Correo</label>
+                        </div>
                     </div>
-                    <button type="submit" class=" btn btn-success btn-block w-100 mb-4">Enviar</button>
-                </form>
+
+
+                    <div class="row ">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="qty" placeholder="cantidad"
+                                    value="">
+                                <label for="floatingInputGrid">Cantidad</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- <label for="floatingSelect">Categoría</label> -->
+                            <div class="form-floating">
+                                <select class="form-select" id="category">
+                                    <option value="student">Estudiante</option>
+                                    <option value="trainee">Trainee</option>
+                                    <option value="junior">Junior</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                                <label class="" for="floatingSelect">Categoría</label>
+                            </div>
+                        </div>
+                    </div>
             </div>
+            <div class="form-outline">
+                <button type="" class=" btn btn-primary btn-block w-100 mb-4">Total a Pagar: $</button>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <button type="submit" class=" btn btn-success btn-block w-100 mb-4">Borrar</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <button type="submit" class=" btn btn-success btn-block w-100 mb-4">Resumen</button>
+                    </div>
+                </div>
+            </div>
+            </form>
         </div>
+    </div>
     </div>
 
     <!-- Sixth Section: Footer -->
