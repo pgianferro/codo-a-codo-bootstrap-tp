@@ -112,6 +112,7 @@ erase.addEventListener('click', function eraseData() {
     qty.value = ""
     category.value = "select"
     total.innerHTML = "Total a Pagar: $ "
+    resume_error.innerHTML = ""
 }
 );
 
@@ -120,9 +121,13 @@ erase.addEventListener('click', function eraseData() {
 resume.addEventListener('click', function calculateTotal() {
 
     if (first_name_error.length > 0 || last_name_error.length > 0 || email_error.length > 0 || qty_error.length > 0 || category.value === "select" ) {
-        resume_error.innerHTML = "Debes completar todos los campos para calcular el total a pagar."
-        resume_error.style.color = "red" 
-    } else {
+        resume_error.innerHTML = "Debes completar todos los campos correctamente para calcular el total a pagar."
+        resume_error.style.color = "red"     
+    } else if (qty.value <=0 ) {
+        resume_error.innerHTML = "Debes completar todos los campos correctamente para calcular el total a pagar."
+        resume_error.style.color = "red"  
+    }
+    else {
 
         resume_error.innerHTML = ""
 
