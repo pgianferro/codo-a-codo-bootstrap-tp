@@ -49,7 +49,7 @@ first_name.addEventListener('blur', function validateFirstName() {
 
 last_name.addEventListener('blur', function validateLastName() {
     if(last_name.value.length<3){
-        last_name_error.innerHTML = "El nombre no es válido";
+        last_name_error.innerHTML = "El apellido no es válido";
         last_name_error.style.color = "red"
         last_name.style.borderColor="red"
     } else {
