@@ -29,16 +29,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#conf">La conferencia</a>
+                            <a class="nav-link" href="index.html#conf">La conferencia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#speakers">Los oradores</a>
+                            <a class="nav-link" href="index.html#speakers">Los oradores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#where">El lugar y la fecha</a>
+                            <a class="nav-link" href="index.html#where">El lugar y la fecha</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#form">Conviértete en orador</a>
+                            <a class="nav-link" href="index.html#form">Conviértete en orador</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active text-success" aria-current="page"
@@ -122,31 +122,34 @@
 
         <div class="container col col-md-6">
             <div class="row mb-4">
-                <form action="mailto:norberto.llopiz@bue.edu.ar" method="post" enctype="text/plain">
+                <form>
                     <div class="row mb-4">
                         <div class="col">
                             <div class="form-outline">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="firstName" placeholder="Nombre" value="">
-                                    <label for="floatingInputGrid">Nombre</label>
+                                    <input type="text" class="form-control" name = "first_name" id="first_name" placeholder="Nombre" value="">
+                                    <label for="first_name">Nombre</label>
                                 </div>
                             </div>
+                            <small class="invalid" id="first_name_error" ></small>
                         </div>
                         <div class="col">
                             <div class="form-outline">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="lastName" placeholder="Apellido" value="">
+                                    <input type="text" class="form-control" name = "last_name" id="last_name" placeholder="Apellido" value="">
                                     <label for="floatingInputGrid">Apellido</label>
                                 </div>
+                                <small class="invalid" id="last_name_error" ></small>
                             </div>
                         </div>
                     </div>
                     <div class="form-outline mb-4">
                         <div class="form-floating">
-                            <input type="email" class="form-control" id="email" placeholder="Correo"
+                            <input type="email" class="form-control" name = "email" id="email" placeholder="Correo"
                                 value="">
                             <label for="floatingInputGrid">Correo</label>
                         </div>
+                        <small class="invalid" id="email_error" ></small>
                     </div>
 
 
@@ -157,11 +160,13 @@
                                     value="">
                                 <label for="floatingInputGrid">Cantidad</label>
                             </div>
+                            <small class="invalid" id="qty_error" ></small>
                         </div>
                         <div class="col">
                             <!-- <label for="floatingSelect">Categoría</label> -->
                             <div class="form-floating">
-                                <select class="form-select" id="category">
+                                <select class="form-select" name = "category" id="category">
+                                    <option value="select">Seleccionar</option>
                                     <option value="student">Estudiante</option>
                                     <option value="trainee">Trainee</option>
                                     <option value="junior">Junior</option>
@@ -169,24 +174,26 @@
                                 </select>
                                 <label class="" for="floatingSelect">Categoría</label>
                             </div>
+                            <small class="invalid" id="category_error" ></small>
                         </div>
                     </div>
             </div>
             <div class="form-outline">
-                <button type="" class=" btn btn-primary btn-block w-100 mb-4">Total a Pagar: $</button>
+                <p id = "total" class=" btn btn-primary w-100 mb-4 text-start">Total a Pagar: $</p>
             </div>
 
             <div class="row mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <button type="submit" class=" btn btn-success btn-block w-100 mb-4">Borrar</button>
+                        <button type="button" onclick="eraseData()" id = "erase" class=" btn btn-success btn-block w-100 mb-4">Borrar</button>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <button type="submit" class=" btn btn-success btn-block w-100 mb-4">Resumen</button>
+                        <button type="button" onclick="calculateTotal()" id = "resume" class=" btn btn-success btn-block w-100 mb-4">Resumen</button>
                     </div>
                 </div>
+                <small class="invalid" id="resume_error" ></small>
             </div>
             </form>
         </div>
@@ -228,6 +235,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
         crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
